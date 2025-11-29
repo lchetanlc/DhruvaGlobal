@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dhruv Global Industries – Service</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    :root {
+      --red: #e2463a;
+      --red-dark: #c32e25;
+      --dark: #111111;
+      --light-gray: #f7f7f7;
+      --muted: #777777;
+      --border-gray: #e5e5e5;
+      --container-width: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--dark);
+      background-color: #ffffff;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* TOP BAR -------------------------------------------------- */
+    .top-bar {
+      background-color: #000;
+      color: #fff;
+      font-size: 12px;
+    }
+
+    .top-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 7px 24px;
+      max-width: var(--container-width);
+      margin: 0 auto;
+    }
+
+    .top-bar-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .top-bar-center a {
+      text-decoration: underline;
+    }
+
+    /* HERO WRAPPER + NAVBAR ----------------------------------- */
+    .hero-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+          rgba(156, 0, 0, 0.9),
+          rgba(156, 0, 0, 0.9)
+        ),
+        url("https://images.pexels.com/photos/3856441/pexels-photo-3856441.jpeg?auto=compress&cs=tinysrgb&w=1600")
+          center/cover no-repeat;
+      z-index: -1;
+    }
+
+    .navbar {
+      position: relative;
+      background: transparent;
+      border: none;
+      z-index: 5;
+    }
+
+    .navbar-inner {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 18px 24px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: #fff;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid #fff;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--red-dark);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .nav-brand-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .nav-link {
+      position: relative;
+      padding-bottom: 4px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .nav-link.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 999px;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .nav-icon-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    /* HERO ----------------------------------------------------- */
+    .hero {
+      padding: 24px 0 60px;
+      color: #fff;
+    }
+
+    .hero-title {
+      font-size: 36px;
+      font-weight: 700;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
+    .hero-breadcrumb {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .hero-breadcrumb span + span::before {
+      content: "/";
+      margin: 0 4px;
+    }
+
+    /* SERVICE STRIP ------------------------------------------- */
+
+    .service-strip {
+      margin-top: -16px;
+    }
+
+    .service-strip-row {
+      display: flex;
+      width: 100%;
+      height: 340px;
+    }
+
+    .service-card {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      min-height: 500px;
+      transition: flex 0.3s ease, transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      flex: 1.2;
+      transform: translateY(-4px);
+    }
+
+    .service-card-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      filter: grayscale(0);
+      transform: scale(1.05);
+    }
+
+    .service-card-overlay {
+      position: absolute;
+      inset: 0;
+      mix-blend-mode: multiply;
+      opacity: 0.9;
+    }
+
+    .service-card-tint--1 { background-color: rgba(215, 85, 85, 0.8); }
+    .service-card-tint--2 { background-color: rgba(223, 158, 69, 0.8); }
+    .service-card-tint--3 { background-color: rgba(49, 123, 177, 0.8); }
+    .service-card-tint--4 { background-color: rgba(201, 86, 69, 0.85); }
+    .service-card-tint--5 { background-color: rgba(130, 88, 193, 0.9); }
+
+    .service-card-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      padding: 22px 20px;
+      color: #fff;
+    }
+
+    .service-card-desc {
+      font-size: 12px;
+      line-height: 1.6;
+      max-width: 210px;
+      margin-bottom: 14px;
+    }
+
+    .service-card-btn {
+      padding: 7px 18px;
+      border-radius: 0;
+      border: none;
+      background-color: #fff;
+      color: #000;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+    }
+
+    .service-card-btn i {
+      margin-left: 6px;
+      font-size: 10px;
+    }
+
+    .service-label-vertical {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-size: 18px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    /* PRINT GALLERY SECTION ----------------------------------- */
+
+    .gallery-section {
+      padding: 70px 0 60px;
+      background-color: #fff;
+      margin-top: 40px;
+    }
+
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .gallery-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .gallery-subtext {
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .gallery-features {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin: 32px 0 40px;
+      flex-wrap: wrap;
+    }
+
+    .gallery-feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .gallery-feature-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background-color: #ffe8e4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--red);
+      font-size: 16px;
+    }
+
+    .gallery-feature span {
+      font-weight: 500;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-auto-rows: 210px;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .gallery-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      color: #fff;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+    }
+
+    .gallery-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.03);
+    }
+
+    .gallery-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.8));
+      z-index: 1;
+    }
+
+    .gallery-card-body {
+      position: relative;
+      z-index: 2;
+      padding: 18px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .gallery-card-body span {
+      display: block;
+      margin-top: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: none;
+      letter-spacing: 0.02em;
+    }
+
+    .gallery-card--tall {
+      grid-row: span 2;
+    }
+
+    .gallery-footer {
+      margin-top: 34px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .gallery-footer button {
+      margin-bottom: 10px;
+      padding: 11px 30px;
+      border-radius: 0;
+      border: none;
+      background-color: var(--red);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+    }
+
+    .gallery-footer button i {
+      margin-left: 8px;
+      font-size: 11px;
+    }
+
+    .gallery-footer a {
+      color: #000;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+
+    /* CONTACT BAND -------------------------------------------- */
+
+    .contact-band {
+      background: linear-gradient(90deg, #c9302e, #e45b45);
+      padding: 60px 0;
+      color: #fff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .contact-card {
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .contact-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .contact-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.15));
+      display: flex;
+      align-items: flex-end;
+      padding: 22px;
+      font-size: 13px;
+    }
+
+    .contact-card-overlay b {
+      font-size: 16px;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .contact-form-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .contact-form-text {
+      font-size: 13px;
+      line-height: 1.7;
+      margin-bottom: 22px;
+      max-width: 390px;
+    }
+
+    .contact-form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 18px;
+      margin-bottom: 14px;
+    }
+
+    .contact-form-grid input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 0;
+      border: 1px solid rgba(255,255,255,0.8);
+      background-color: transparent;
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+      grid-column: 1/-1;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: rgba(255,255,255,0.8);
+    }
+
+    .contact-form button {
+      margin-top: 6px;
+      padding: 11px 26px;
+      border: none;
+      background-color: #fff;
+      color: #000;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+    }
+
+    /* FOOTER -------------------------------------------------- */
+
+    .footer {
+      border-top: 1px solid #eee;
+      padding: 40px 0 14px;
+      background-color: #fff;
+      font-size: 13px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) repeat(4, minmax(0, 1fr));
+      gap: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #f0f0f0;
+      margin-bottom: 18px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-logo-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 3px solid var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--red);
+    }
+
+    .footer-logo-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--red);
+    }
+
+    .footer-heading {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .footer-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 12px;
+      color: #444;
+    }
+
+    .footer-list li {
+      margin-bottom: 6px;
+    }
+
+    .footer-list li span {
+      display: inline-block;
+      margin-left: 8px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .footer-social a {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #f3f3f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #444;
+      font-size: 12px;
+    }
+    /* PRINT GALLERY SECTION ----------------------------------- */
+
+.gallery-section {
+  padding: 70px 0 60px;
+  background-color: #fff;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gallery-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.gallery-subtext {
+  max-width: 560px;
+  margin: 0 auto;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* icons row */
+.gallery-features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 32px 0 40px;
+  flex-wrap: wrap;
+}
+
+.gallery-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.gallery-feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background-color: #ffe8e4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red);
+  font-size: 16px;
+}
+
+/* >>> GRID LAYOUT: 3 left, tall center, 3 right */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* left / center / right */
+  grid-template-rows: repeat(3, 210px);             /* 3 rows */
+  gap: 22px;
+}
+
+/* generic card look */
+.gallery-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+}
+
+.gallery-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.03);
+}
+
+.gallery-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.8));
+  z-index: 1;
+}
+
+.gallery-card-body {
+  position: relative;
+  z-index: 2;
+  padding: 18px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.gallery-card-body span {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+/* explicit placement: 3 left, 3 right, center tall */
+
+.g-left-1  { grid-column: 1; grid-row: 1; }
+.g-left-2  { grid-column: 1; grid-row: 2; }
+.g-left-3  { grid-column: 1; grid-row: 3; }
+
+.g-center  { grid-column: 2; grid-row: 1 / 4; } /* spans all 3 rows */
+
+.g-right-1 { grid-column: 3; grid-row: 1; }
+.g-right-2 { grid-column: 3; grid-row: 2; }
+.g-right-3 { grid-column: 3; grid-row: 3; }
+
+/* bottom Explore row */
+.gallery-footer {
+  margin-top: 34px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.gallery-footer button {
+  margin-bottom: 10px;
+  padding: 11px 30px;
+  border-radius: 0;
+  border: none;
+  background-color: var(--red);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+
+.gallery-footer button i {
+  margin-left: 8px;
+  font-size: 11px;
+}
+
+.gallery-footer a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* responsive tweaks */
+
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;          /* let them flow */
+  }
+
+  /* stack normally on smaller screens */
+  .g-left-1, .g-left-2, .g-left-3,
+  .g-center, .g-right-1, .g-right-2, .g-right-3 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+    /* RESPONSIVE ---------------------------------------------- */
+
+    @media (max-width: 1024px) {
+      .contact-grid,
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: 210px;
+      }
+
+      .service-card:hover {
+        flex: 1.05;
+      }
+
+      .nav-brand-text {
+        display: none;
+      }
+
+      .navbar-inner {
+        flex-wrap: wrap;
+      }
+
+      .nav-menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 6px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .service-strip-row {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .service-card {
+        height: 220px;
+        min-height: 220px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 210px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
+      }
+
+      .contact-form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-bar-group">
+        <i class="fa-regular fa-envelope"></i>
+        <span>dhruvaglobalindia@gmail.com</span>
+      </div>
+      <div class="top-bar-group top-bar-center">
+        <span>Significant Printing Store. Discover&nbsp;</span>
+        <a href="#">Modern Collections</a>
+      </div>
+      <div class="top-bar-group">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Find a Nearby Store</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO + NAVBAR -->
+  <div class="hero-wrapper">
+    <div class="hero-bg"></div>
+
+    <header class="navbar">
+      <div class="navbar-inner">
+        <div class="nav-left">
+          <div class="nav-logo-circle">DGI</div>
+          <div class="nav-brand-text">Dhruv Global Industries</div>
+        </div>
+
+        <nav class="nav-menu">
+          <a href="#" class="nav-link">Home</a>
+          <a href="#" class="nav-link">About Us</a>
+          <a href="#" class="nav-link">Product</a>
+          <a href="#" class="nav-link active">Services</a>
+          <a href="#" class="nav-link">Contact Us</a>
+        </nav>
+
+        <div class="nav-right">
+          <div class="nav-icon-circle"><i class="fa-regular fa-user"></i></div>
+          <div class="nav-icon-circle"><i class="fa-solid fa-cart-shopping"></i></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">Service</h1>
+        <div class="hero-breadcrumb">
+          <span>Home</span><span>Service</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SERVICE STRIP -------------------------------------------->
+  <section class="service-strip">
+    <div class="service-strip-row">
+
+      <!-- Inkjet Printing with text + button -->
+      <div class="service-card">
+        <div class="service-card-bg" style="background-image:url('https://images.pexels.com/photos/3809994/pexels-photo-3809994.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
+        <div class="service-card-overlay service-card-tint--1"></div>
+        <div class="service-card-inner">
+          <div class="service-card-desc">
+            Ut ornare lectus sit amet est placerat in. Malesuada nunc egestas congue quisque egestas.
+          </div>
+          <button class="service-card-btn">
+            Know More <i class="fa-solid fa-play"></i>
+          </button>
+          <div class="service-label-vertical">Inkjet Printing</div>
+        </div>
+      </div>
+
+      <!-- Screen Printing -->
+      <div class="service-card">
+        <div class="service-card-bg" style="background-image:url('https://images.pexels.com/photos/7308526/pexels-photo-7308526.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
+        <div class="service-card-overlay service-card-tint--2"></div>
+        <div class="service-card-inner">
+          <div class="service-label-vertical">Screen Printing</div>
+        </div>
+      </div>
+
+      <!-- Digital Printing -->
+      <div class="service-card">
+        <div class="service-card-bg" style="background-image:url('https://images.pexels.com/photos/7308054/pexels-photo-7308054.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
+        <div class="service-card-overlay service-card-tint--3"></div>
+        <div class="service-card-inner">
+          <div class="service-label-vertical">Digital Printing</div>
+        </div>
+      </div>
+
+      <!-- Flex Printing -->
+      <div class="service-card">
+        <div class="service-card-bg" style="background-image:url('https://images.pexels.com/photos/7305529/pexels-photo-7305529.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
+        <div class="service-card-overlay service-card-tint--4"></div>
+        <div class="service-card-inner">
+          <div class="service-label-vertical">Flex Printing</div>
+        </div>
+      </div>
+
+      <!-- 3D Printing -->
+      <div class="service-card">
+        <div class="service-card-bg" style="background-image:url('https://images.pexels.com/photos/5721916/pexels-photo-5721916.jpeg?auto=compress&cs=tinysrgb&w=1600');"></div>
+        <div class="service-card-overlay service-card-tint--5"></div>
+        <div class="service-card-inner">
+          <div class="service-label-vertical">3D Printing</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRINT GALLERY -------------------------------------------->
+  <section class="gallery-section">
+  <div class="container" style="margin-top: 70px;">
+    <div class="gallery-header">
+      <h2 class="gallery-title">Print Gallery</h2>
+      <p class="gallery-subtext">
+        Morbi at faucibus nunc. Vivamus rhoncus placerat rhoncus. Cras et magna magna.
+        Proin a erat commodo, pretium diam id, volutpat lacus. Vestibulum mattis rutrum mauris.
+      </p>
+    </div>
+
+    <div class="gallery-features">
+      <div class="gallery-feature">
+        <div class="gallery-feature-icon">
+          <i class="fa-regular fa-clone"></i>
+        </div>
+        <span>50+ Custom Design Templates</span>
+      </div>
+      <div class="gallery-feature">
+        <div class="gallery-feature-icon">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+        <span>New Design Tools</span>
+      </div>
+      <div class="gallery-feature">
+        <div class="gallery-feature-icon">
+          <i class="fa-regular fa-circle-check"></i>
+        </div>
+        <span>Quality Print Guaranteed</span>
+      </div>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- LEFT COLUMN (3 cards) -->
+      <div class="gallery-card g-left-1">
+        <img src="https://images.pexels.com/photos/7308520/pexels-photo-7308520.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+        <div class="gallery-card-body">
+          HIGH QUALITY
+          <span>Personalized Poster Prints</span>
+        </div>
+      </div>
+
+      <div class="gallery-card g-left-2">
+        <img src="https://images.pexels.com/photos/7308492/pexels-photo-7308492.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+        <div class="gallery-card-body">
+          DRINKWARE PRODUCTS
+          <span>Drinkware Products</span>
+        </div>
+      </div>
+
+      <div class="gallery-card g-left-3">
+        <img src="https://images.pexels.com/photos/3809974/pexels-photo-3809974.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+        <div class="gallery-card-body">
+          EASY PROMOTIONAL PRODUCTS
+          <span>Promotional Products</span>
+        </div>
+      </div>
+
+      <!-- CENTER TALL CARD -->
+      <div class="gallery-card g-center">
+        <img src="https://images.pexels.com/photos/3809994/pexels-photo-3809994.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+        <div class="gallery-card-body">
+          PERSONALIZED STATIONERY
+          <span>Office Accessories</span>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN (3 cards) -->
+      <div class="gallery-card g-right-1">
+        <img src="https://images.pexels.com/photos/3808875/pexels-photo-3808875.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+        <div class="gallery-card-body">
+          CUSTOM BOOKLET PRINTING
+          <span>Custom Booklet Printing</span>
+        </div>
+      </div>
+
+      <div class="gallery-card g-right-2">
+        <img src="https://images.pexels.com/photos/7308054/pexels-photo-7308054.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+        <div class="gallery-card-body">
+          LARGE PROJECTS
+          <span>Custom Wall Decor</span>
+        </div>
+      </div>
+
+      <div class="gallery-card g-right-3">
+        <img src="https://images.pexels.com/photos/5721919/pexels-photo-5721919.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">
+        <div class="gallery-card-body">
+          SYNTHETIC FABRICS PRINT
+          <span>Synthetic Fabrics Print</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-footer">
+      <button>Explore More <i class="fa-solid fa-play"></i></button>
+      <div>Can’t find what you are looking? <a href="#">Contact us</a></div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- CONTACT BAND --------------------------------------------->
+  <section class="contact-band">
+    <div class="container contact-grid">
+      <div class="contact-card">
+        <img src="https://images.pexels.com/photos/1181555/pexels-photo-1181555.jpeg?auto=compress&cs=tinysrgb&w=1200"
+             alt="Support team" />
+        <div class="contact-card-overlay">
+          <div>
+            <b>24/7 Contact Support</b>
+            <span>info@example.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="contact-form-title">
+          Contact Us If You Need A<br />Custom Design Without Delay!
+        </div>
+        <div class="contact-form-text">
+          Eaecenas eu vehicula felis. Aenean elementum tortor lacinia, at tincidunt erat elementum.
+        </div>
+
+        <form>
+          <div class="contact-form-grid">
+            <input type="text" placeholder="First Name" />
+            <input type="text" placeholder="Last Name" />
+            <input type="email" placeholder="Your Email" />
+            <input type="text" placeholder="Company Name" />
+            <textarea placeholder="Additional Message"></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER --------------------------------------------------->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">
+            <div class="footer-logo-circle">DGI</div>
+            <div>
+              <div class="footer-logo-text">Dhruv</div>
+              <div style="font-size:12px;">Global Industries</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-list">
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Corporate Enquiries</li>
+            <li>Intellectual Property</li>
+            <li>Track Order</li>
+            <li>Customs Tariffs &amp; Fees</li>
+            <li>Shipping Policy</li>
+            <li>Brand Partners</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Services</div>
+          <ul class="footer-list">
+            <li>Brands List</li>
+            <li>Customer Reviews</li>
+            <li>Return Policy</li>
+            <li>Careers</li>
+            <li>Blog</li>
+            <li>FAQ</li>
+            <li>For Investors</li>
+            <li>Sustainability</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Payment</div>
+          <ul class="footer-list">
+            <li>Paypal</li>
+            <li>Visa</li>
+            <li>Mastercard</li>
+            <li>American Express</li>
+            <li>RuPay</li>
+            <li>Net Banking</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Shipping</div>
+          <ul class="footer-list">
+            <li>Express Shipping<span>3–6 Business Days</span></li>
+            <li>Standard Shipping<span>10+ Business Days</span></li>
+          </ul>
+          <div class="footer-heading" style="margin-top:10px;">Stay Connected</div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          Copyright © 2023 Dhruv Global Industries. All rights reserved.
+        </div>
+        <div class="footer-links">
+          <span>Terms &amp; Conditions</span>
+          <span>Privacy Policy</span>
+          <span>About Us</span>
+          <span>Contact Us</span>
+        </div>
+        <div class="footer-social">
+          <span>Follow Us</span>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

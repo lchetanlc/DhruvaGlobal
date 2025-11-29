@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dhruv Global Industries – About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    :root {
+      --red: #e2463a;
+      --red-dark: #c32e25;
+      --dark: #111111;
+      --light-gray: #f7f7f7;
+      --muted: #777777;
+      --border-gray: #e5e5e5;
+      --container-width: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--dark);
+      background-color: #ffffff;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* TOP BAR -------------------------------------------------- */
+    .top-bar {
+      background-color: #000;
+      color: #fff;
+      font-size: 12px;
+    }
+
+    .top-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 7px 24px;
+      max-width: var(--container-width);
+      margin: 0 auto;
+    }
+
+    .top-bar-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .top-bar-center a {
+      text-decoration: underline;
+    }
+
+    /* HERO WRAPPER + NAVBAR ----------------------------------- */
+    .hero-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+          rgba(156, 0, 0, 0.9),
+          rgba(156, 0, 0, 0.9)
+        ),
+        url("https://images.pexels.com/photos/3856441/pexels-photo-3856441.jpeg?auto=compress&cs=tinysrgb&w=1600")
+          center/cover no-repeat;
+      z-index: -1;
+    }
+
+    .navbar {
+      position: relative;
+      background: transparent;
+      border: none;
+      z-index: 5;
+    }
+
+    .navbar-inner {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 18px 24px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: #fff;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid #fff;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--red-dark);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .nav-brand-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .nav-link {
+      position: relative;
+      padding-bottom: 4px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .nav-link.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 999px;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .nav-icon-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    /* HERO ----------------------------------------------------- */
+    .hero {
+      padding: 24px 0 60px;
+      color: #fff;
+    }
+
+    .hero-title {
+      font-size: 36px;
+      font-weight: 700;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
+    .hero-breadcrumb {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .hero-breadcrumb span + span::before {
+      content: "/";
+      margin: 0 4px;
+    }
+
+    /* INTRO MAIN ---------------------------------------------- */
+    .intro-main {
+      background-color: #fff;
+      padding: 56px 0 40px;
+    }
+
+    .intro-heading {
+      max-width: 700px;
+      margin: 0 auto 32px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .cta-toggle {
+      display: inline-flex;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid #f0f0f0;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      background-color: #fff;
+    }
+
+    .cta-btn {
+      border: none;
+      outline: none;
+      padding: 12px 40px;
+      font-size: 14px;
+      font-weight: 600;
+      background-color: #fff;
+      color: #111;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .cta-btn.primary {
+      background-color: var(--red);
+      color: #fff;
+    }
+
+    .cta-btn:not(.primary):hover {
+      background-color: var(--light-gray);
+    }
+
+    /* CORPORATE GIFTS ----------------------------------------- */
+    .corporate-section {
+      padding: 10px 0 60px;
+    }
+
+    .corp-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+      gap: 36px;
+      align-items: flex-start;
+    }
+
+    .corp-kicker {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .corp-title {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .corp-body {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .corp-list {
+      list-style: none;
+      margin: 0 0 22px;
+      padding: 0;
+    }
+
+    .corp-list-item {
+      padding-left: 18px;
+      position: relative;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .corp-list-item::before {
+      content: "•";
+      color: var(--red);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .corp-list-item b {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .corp-contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .corp-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #333;
+    }
+
+    .corp-contact-item i {
+      color: var(--red);
+    }
+
+    .btn-red-outline {
+      margin-top: 26px;
+      padding: 12px 34px;
+      background-color: var(--red);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .btn-red-outline i {
+      margin-left: 8px;
+      font-size: 11px;
+    }
+
+    /* Fixed image layout for corporate section */
+    .corp-img-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;           /* spacing between images */
+}
+
+.corp-img-grid > div {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.corp-img-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* crops nicely */
+  display: block;
+}
+
+
+    /* RED ABOUT BAND ------------------------------------------ */
+    .about-band {
+      background: linear-gradient(90deg, #c9302e, #e45b45);
+      color: #fff;
+      padding: 60px 0;
+      margin-top: 18px;
+    }
+
+    .about-band-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-band h3 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 12px;
+    }
+
+    .about-band-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .about-band-text {
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 16px;
+      opacity: 0.95;
+    }
+
+    .about-band .btn-light {
+      padding: 11px 30px;
+      border: none;
+      background-color: #fff;
+      color: #000;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      margin-top: 18px;
+    }
+
+    .about-band .btn-light i {
+      margin-left: 8px;
+      font-size: 11px;
+    }
+
+    .about-card {
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      color: #111;
+      display: grid;
+      grid-template-rows: auto auto;
+      position: relative;
+    }
+
+    .about-card-img {
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .about-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-card-badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background-color: var(--red-dark);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .about-card-badge span {
+      display: block;
+    }
+
+    .about-card-badge span:first-child {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .about-card-body {
+      padding: 20px 22px 18px;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .about-band-contact {
+      margin-top: 22px;
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .about-contact-box {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    .about-contact-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background-color: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .about-contact-box b {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* STORY + AWARDS + FAQ ------------------------------------ */
+    .story-section {
+      padding: 70px 0 40px;
+      background-color: #fff;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    .story-card {
+      background: linear-gradient(90deg, #c9302e, #e45b45);
+      color: #fff;
+      padding: 40px 34px 30px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+
+    .story-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .story-card p {
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .story-card .btn-light {
+      padding: 11px 30px;
+      border: none;
+      background-color: #fff;
+      color: #000;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+    }
+
+    .story-main-img {
+  width: 100%;
+  height: 620px;              /* You can adjust height */
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.story-main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+    .awards-card {
+      background-color: var(--red);
+      color: #fff;
+      padding: 22px 26px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .awards-number {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .awards-text-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .awards-text-sub {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      opacity: 0.9;
+    }
+
+    .faq-wrapper {
+      margin-top: 22px;
+    }
+
+    .faq-item {
+      border-radius: 4px;
+      border: 1px solid var(--border-gray);
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+
+    .faq-header {
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      background-color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .faq-header:hover {
+      background-color: #fdf4f3;
+    }
+
+    .faq-header span {
+      padding-right: 16px;
+    }
+
+    .faq-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    .faq-body {
+      padding: 10px 16px 14px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.7;
+      display: none;
+      background-color: #fff7f5;
+    }
+
+    .faq-item.open .faq-body {
+      display: block;
+    }
+
+    .faq-item.open .faq-icon i {
+      transform: rotate(180deg);
+    }
+
+    .faq-bottom-cta {
+      margin-top: 18px;
+      padding: 18px 18px 16px;
+      background-color: #fff7f5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 13px;
+    }
+
+    .faq-bottom-cta small {
+      display: block;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .faq-bottom-cta button {
+      padding: 10px 26px;
+      border-radius: 0;
+      border: 1px solid #000;
+      background-color: #000;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+    }
+
+    /* CONTACT BAND -------------------------------------------- */
+    .contact-band {
+      background: linear-gradient(90deg, #c9302e, #e45b45);
+      padding: 60px 0;
+      color: #fff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .contact-card {
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .contact-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .contact-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0.15));
+      display: flex;
+      align-items: flex-end;
+      padding: 22px;
+      font-size: 13px;
+    }
+
+    .contact-card-overlay span {
+      display: block;
+    }
+
+    .contact-card-overlay b {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .contact-form-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .contact-form-text {
+      font-size: 13px;
+      line-height: 1.7;
+      margin-bottom: 22px;
+      max-width: 390px;
+    }
+
+    .contact-form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 18px;
+      margin-bottom: 14px;
+    }
+
+    .contact-form-grid input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 0;
+      border: 1px solid rgba(255,255,255,0.8);
+      background-color: transparent;
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+      grid-column: 1/-1;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: rgba(255,255,255,0.8);
+    }
+
+    .contact-form button {
+      margin-top: 6px;
+      padding: 11px 26px;
+      border: none;
+      background-color: #fff;
+      color: #000;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+    }
+
+    /* CLIENTS -------------------------------------------------- */
+    .clients-section {
+      padding: 56px 0 32px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .clients-section h3 {
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .clients-section p {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .clients-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 26px;
+    }
+
+    .client-logo {
+      height: 32px;
+      min-width: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: #555;
+      border-radius: 3px;
+      background-color: #f8f8f8;
+      padding: 6px 16px;
+    }
+    .client-logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.9;
+  transition: 0.2s ease;
+}
+
+.client-logo-img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.clients-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+    /* FOOTER -------------------------------------------------- */
+    .footer {
+      border-top: 1px solid #eee;
+      padding: 40px 0 14px;
+      background-color: #fff;
+      font-size: 13px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) repeat(4, minmax(0, 1fr));
+      gap: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #f0f0f0;
+      margin-bottom: 18px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-logo-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 3px solid var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--red);
+    }
+
+    .footer-logo-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--red);
+    }
+
+    .footer-heading {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .footer-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 12px;
+      color: #444;
+    }
+
+    .footer-list li {
+      margin-bottom: 6px;
+    }
+
+    .footer-list li span {
+      display: inline-block;
+      margin-left: 8px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .footer-social a {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #f3f3f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #444;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE ---------------------------------------------- */
+    @media (max-width: 1024px) {
+      .corp-grid,
+      .about-band-grid,
+      .story-grid,
+      .contact-grid,
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-brand-text {
+        display: none;
+      }
+
+      .navbar-inner {
+        flex-wrap: wrap;
+      }
+
+      .nav-menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 6px;
+      }
+
+      .story-main-img {
+        height: 260px;
+      }
+
+      .contact-card img {
+        height: 260px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-title {
+        font-size: 30px;
+      }
+
+      .intro-heading {
+        font-size: 24px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .faq-bottom-cta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .corp-img-grid {
+        grid-template-rows: 150px 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-bar-group">
+        <i class="fa-regular fa-envelope"></i>
+        <span>dhruvaglobalindia@gmail.com</span>
+      </div>
+      <div class="top-bar-group top-bar-center">
+        <span>Significant Printing Store. Discover&nbsp;</span>
+        <a href="#">Modern Collections</a>
+      </div>
+      <div class="top-bar-group">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Find a Nearby Store</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO + NAVBAR -->
+  <div class="hero-wrapper">
+    <div class="hero-bg"></div>
+
+    <header class="navbar">
+      <div class="navbar-inner">
+        <div class="nav-left">
+          <div class="nav-logo-circle">DGI</div>
+          <div class="nav-brand-text">Dhruv Global Industries</div>
+        </div>
+
+        <nav class="nav-menu">
+          <a href="#" class="nav-link">Home</a>
+          <a href="#" class="nav-link active">About Us</a>
+          <a href="#" class="nav-link">Product</a>
+          <a href="#" class="nav-link">Services</a>
+          <a href="#" class="nav-link">Contact Us</a>
+        </nav>
+
+        <div class="nav-right">
+          <div class="nav-icon-circle"><i class="fa-regular fa-user"></i></div>
+          <div class="nav-icon-circle"><i class="fa-solid fa-cart-shopping"></i></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">About</h1>
+        <div class="hero-breadcrumb">
+          <span>Home</span><span>About</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- INTRO MAIN -->
+  <section class="intro-main">
+    <div class="container" style="text-align:center;">
+      <h2 class="intro-heading">
+        Quality Customized Goods For Own Use<br />
+        And To Market Them Online
+      </h2>
+
+      <div class="cta-toggle" id="ctaToggle">
+        <button class="cta-btn primary">Selling Online</button>
+        <button class="cta-btn">Ordering for myself</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORPORATE GIFTS -->
+  <section class="corporate-section">
+    <div class="container corp-grid">
+      <div>
+        <div class="corp-kicker">Corporate Gifts</div>
+        <h3 class="corp-title">Eye-Catching Customization</h3>
+        <p class="corp-body">
+          In ullamcorper blandit porta. Aenean venenatis leo. Vivamus imperdiet velit nisl
+          et lobortis. Praesent et diam, sollicitudin in sapien nec, hendrerit rutrum odio.
+          Maecenas aliquam lobortis orci, et pellentesque massa blandit pulvinar.
+        </p>
+
+        <ul class="corp-list">
+          <li class="corp-list-item">
+            <b>Embroidered &amp; Printed T-Shirts</b>
+            Curabitur metus aliquam eleifend mi in nulla posuere sollicitudin elit eget nunc.
+          </li>
+          <li class="corp-list-item">
+            <b>Lightweight Customized Water Bottles</b>
+            Bibendum ut varius vel pharetra vel turpis nunc eget lorem vitae sapien pellentesque.
+          </li>
+          <li class="corp-list-item">
+            <b>Custom Printed Laptop Bags</b>
+            Elementum tempus egestas sed sed risus pretium quam vulputate dignissim.
+          </li>
+          <li class="corp-list-item">
+            <b>Professional &amp; Stylish Personalized Pens</b>
+            Semper risus in hendrerit gravida. Morbi leo urna molestie at elementum.
+          </li>
+          <li class="corp-list-item">
+            <b>Branded Portable Power Bank</b>
+            Imperdiet massa tincidunt nunc pulvinar sapien et ligula tellus ullamcorper.
+          </li>
+        </ul>
+
+        <div class="corp-contact-row">
+          <div class="corp-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>576, Panchwati Colony, Palwal</span>
+          </div>
+          <div class="corp-contact-item">
+            <i class="fa-regular fa-envelope"></i>
+            <span>dhruvaglobalindia@gmail.com</span>
+          </div>
+          <div class="corp-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91-8999838104</span>
+          </div>
+        </div>
+
+        <button class="btn-red-outline">
+          Get In Touch <i class="fa-solid fa-play"></i>
+        </button>
+      </div>
+
+      <div class="corp-img-grid">
+  <div>
+    <img src="1.png" alt="Printing machine" />
+  </div>
+  <div>
+    <img src="2.png" alt="Worker in print shop" />
+  </div>
+  <div>
+    <img src="3.png" alt="Large printer" />
+  </div>
+  <div>
+    <img src="4.png" alt="3D printer" />
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT BAND -->
+  <section class="about-band">
+    <div class="container about-band-grid">
+      <div>
+        <h3>About Us</h3>
+        <div class="about-band-title">
+          Praesent eget viverra ipsum. Duis ultricies rhoncus tempor.
+        </div>
+        <p class="about-band-text">
+          Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras eget augue
+          sagittis, congue nibh ut, imperdiet nibh. Duis metus odio, ullamcorper id lectus
+          vitae, tincidunt porta ante. Pellentesque eu sapien nisl pulvinar mollis sed quis
+          libero. Nam cursus orci arcu et eros maximus aliquam. In hac habitasse platea
+          dictumst.
+        </p>
+        <p class="about-band-text">
+          Suspendisse molestie maximus rhoncus. Phasellus a mi porta tortor libero, in
+          mollis ex. Vivamus lobortis aliquet velit. Vivamus sodales ultrices congue.
+          Donec egestas in neque nec massa.
+        </p>
+
+        <button class="btn-light">
+          Get In Touch <i class="fa-solid fa-play"></i>
+        </button>
+
+        <div class="about-band-contact">
+          <div class="about-contact-box">
+            <div class="about-contact-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <b>Call Us Anytime</b>
+              <span>+00 123 456789</span>
+            </div>
+          </div>
+          <div class="about-contact-box">
+            <div class="about-contact-icon">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div>
+              <b>Email Us Anytime</b>
+              <span>info@example.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <div class="about-card-img">
+          <img src="https://images.pexels.com/photos/3809995/pexels-photo-3809995.jpeg?auto=compress&cs=tinysrgb&w=1200"
+               alt="Man printing" />
+        </div>
+        <div class="about-card-badge">
+          <span>25+</span>
+          <span>Years</span>
+          <span>of Experience in</span>
+          <span>Printing Services</span>
+        </div>
+        <div class="about-card-body">
+          Phasellus porta tempus sem, ac dictum enim luctus sed. Nam scelerisque a turpis
+          mattis finibus. Etiam cursus a velit non euismod. Praesent fringilla ex sed enim
+          ultricies sollicitudin. Proin sit amet dictum lacus.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY + AWARDS + FAQ -->
+  <section class="story-section">
+    <div class="container story-grid">
+      <div>
+        <div class="story-card">
+          <h3>Every Company Has A Worthwhile Origin Story To Share, Here Is Our Success Story.</h3>
+          <p>
+            Nam sed neque turpis. Nulla pretium elit libero, a laoreet turpis eleifend eu.
+            In pellentesque lacus vitae urna rhoncus facilisis et ac nibh. Morbi id eleifend
+            urna. Praesent eget leo a odio molestie faucibus.
+          </p>
+          <button class="btn-light">
+            Read More <i class="fa-solid fa-play"></i>
+          </button>
+        </div>
+
+        <div class="story-main-img">
+          <img src="5.png"
+               alt="Printing" />
+        </div>
+      </div>
+
+      <div>
+        <div class="awards-card">
+          <div class="awards-number">#1</div>
+          <div>
+            <div class="awards-text-sub">2023 Award</div>
+            <div class="awards-text-title">Printer of the Year 2023</div>
+            <div class="awards-text-sub">NFT Printer Association</div>
+          </div>
+        </div>
+
+        <div class="awards-card">
+          <div class="awards-number">#2</div>
+          <div>
+            <div class="awards-text-sub">2021 Winner</div>
+            <div class="awards-text-title">Best In Show Award</div>
+            <div class="awards-text-sub">Corporate Gifts Design</div>
+          </div>
+        </div>
+
+        <div class="awards-card">
+          <div class="awards-number">#3</div>
+          <div>
+            <div class="awards-text-sub">2020 Best Seller</div>
+            <div class="awards-text-title">Best Functional Printer</div>
+            <div class="awards-text-sub">Best in Automotive &amp; Mould Design</div>
+          </div>
+        </div>
+
+        <div class="faq-wrapper">
+          <div class="faq-item open">
+            <div class="faq-header">
+              <span>What is the process for using Dhruva Global Industries?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-body">
+              Phasellus dapibus tempus sem, ac dictum enim luctus sed. Nam scelerisque turpis
+              mattis finibus. Etiam cursus a velit non euismod. Phasellus id faucibus ipsum,
+              quis gravida ligula. Pellentesque vel neque non nisi ultrices sollicitudin.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <span>How much does using the DGI service cost?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-body">
+              Pricing depends on product type, order volume, and turnaround time. Tell us
+              what you need printed and we’ll provide a clear quote before production.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <span>Should I use the DGI app?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-body">
+              Yes, the app lets you upload artwork, approve proofs, track orders and reorder
+              favourites in a few taps.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <span>How can I browse and buy things from the collection?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-body">
+              Browse our online catalogue, filter by category or occasion and add items to
+              your cart. For bulk/corporate orders, our team can help with custom quotes.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <span>Can I find out how my order is progressing?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-body">
+              Every order includes live tracking updates from artwork approval through
+              printing, packing and dispatch.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <span>How much time does it take for my order to arrive?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-body">
+              Standard production plus shipping is typically 3–10 business days depending
+              on volume and destination. Rush delivery is available on request.
+            </div>
+          </div>
+
+          <div class="faq-bottom-cta">
+            <div>
+              <b>Still have questions?</b>
+              <small>Can’t find the answer you’re looking for? Please reach out to our friendly team.</small>
+            </div>
+            <button>Get In Touch</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT BAND -->
+  <section class="contact-band">
+    <div class="container contact-grid">
+      <div class="contact-card">
+        <img src="https://images.pexels.com/photos/1181555/pexels-photo-1181555.jpeg?auto=compress&cs=tinysrgb&w=1200"
+             alt="Support team" />
+        <div class="contact-card-overlay">
+          <div>
+            <b>24/7 Contact Support</b>
+            <span>info@example.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="contact-form-title">
+          Contact Us If You Need A<br />Custom Design Without Delay!
+        </div>
+        <div class="contact-form-text">
+          Eaecenas eu vehicula felis. Nam eget elementum tortor lacinia, at tincidunt erat
+          elementum.
+        </div>
+
+        <form>
+          <div class="contact-form-grid">
+            <input type="text" placeholder="First Name" />
+            <input type="text" placeholder="Last Name" />
+            <input type="email" placeholder="Your Email" />
+            <input type="text" placeholder="Company Name" />
+            <textarea placeholder="Additional Message"></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="clients-section">
+  <div class="container">
+    <h3>Our Clients</h3>
+    <p>Trusted By 200+ Amazing Companies Worldwide</p>
+
+    <div class="clients-logos">
+
+      <img class="client-logo-img" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/visa.svg" alt="Visa" />
+      <img class="client-logo-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/2560px-Walmart_logo.svg.png" alt="Walmart" />
+      <img class="client-logo-img" src="https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg" alt="Slack" />
+      <img class="client-logo-img" src="https://cdn.shopify.com/static/shopify-favicon.png" alt="Shopify" />
+      <img class="client-logo-img" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google" />
+      <img class="client-logo-img" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" />
+      <img class="client-logo-img" src="https://cdn.worldvectorlogo.com/logos/trello.svg" alt="Trello" />
+      <img class="client-logo-img" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" />
+      <img class="client-logo-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Canva_icon_2021.svg/1024px-Canva_icon_2021.svg.png" alt="Canva" />
+      <img class="client-logo-img" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/AT%26T_logo_2016.svg" alt="AT&T" />
+      <img class="client-logo-img" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" />
+      <img class="client-logo-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Alibaba_Group_logo.svg/2560px-Alibaba_Group_logo.svg.png" alt="Alibaba" />
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">
+            <div class="footer-logo-circle">DGI</div>
+            <div>
+              <div class="footer-logo-text">Dhruv</div>
+              <div style="font-size:12px;">Global Industries</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-list">
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Corporate Enquiries</li>
+            <li>Intellectual Property</li>
+            <li>Track Order</li>
+            <li>Customs Tariffs &amp; Fees</li>
+            <li>Shipping Policy</li>
+            <li>Brand Partners</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Services</div>
+          <ul class="footer-list">
+            <li>Brands List</li>
+            <li>Customer Reviews</li>
+            <li>Return Policy</li>
+            <li>Careers</li>
+            <li>Blog</li>
+            <li>FAQ</li>
+            <li>For Investors</li>
+            <li>Sustainability</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Payment</div>
+          <ul class="footer-list">
+            <li>Paypal</li>
+            <li>Visa</li>
+            <li>Mastercard</li>
+            <li>American Express</li>
+            <li>RuPay</li>
+            <li>Net Banking</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Shipping</div>
+          <ul class="footer-list">
+            <li>Express Shipping<span>3–6 Business Days</span></li>
+            <li>Standard Shipping<span>10+ Business Days</span></li>
+          </ul>
+          <div class="footer-heading" style="margin-top:10px;">Stay Connected</div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          Copyright © 2023 Dhruv Global Industries. All rights reserved.
+        </div>
+        <div class="footer-links">
+          <span>Terms &amp; Conditions</span>
+          <span>Privacy Policy</span>
+          <span>About Us</span>
+          <span>Contact Us</span>
+        </div>
+        <div class="footer-social">
+          <span>Follow Us</span>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS: CTA toggle + FAQ accordion --------------------------->
+  <script>
+    // CTA toggle
+    document.querySelectorAll("#ctaToggle .cta-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#ctaToggle .cta-btn").forEach(b => b.classList.remove("primary"));
+        btn.classList.add("primary");
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll(".faq-item").forEach(item => {
+      const header = item.querySelector(".faq-header");
+      header.addEventListener("click", () => {
+        if (!item.classList.contains("open")) {
+          document.querySelectorAll(".faq-item").forEach(i => i.classList.remove("open"));
+        }
+        item.classList.toggle("open");
+      });
+    });
+  </script>
+</body>
+</html>
